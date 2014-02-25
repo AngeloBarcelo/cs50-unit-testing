@@ -47,6 +47,10 @@ int main(int argc, string argv[])
     sort(hugeArray, 10);
     printf("\nHuge array should be sorted %s", isTrue(isSorted(hugeArray, 10)));
     
+    int negativeArray[5] = {5, -2, 3, 3, 1000};
+    sort(negativeArray, 5);
+    printf("\n5, -2, 3, 3, 1000 should be -2, 3, 3, 5 1000 %s", isTrue(isSorted(negativeArray, 5)));
+    
     printf("\n\n");
 }
 

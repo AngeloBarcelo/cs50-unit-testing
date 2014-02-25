@@ -29,18 +29,30 @@ bool search(int value, int values[], int n)
  */
 void sort(int values[], int n)
 {
-    while(!isSorted(values, n))
+/*    while(!isSorted(values, n))*/
+/*    {*/
+/*        for (int i=0; i<=n-2; i++) {*/
+/*            if (values[i + 1] < values[i])*/
+/*            {*/
+/*                int tmp = values[i];*/
+/*                values[i] = values[i+1];*/
+/*                values[i+1] = tmp;*/
+/*            }        */
+/*        }*/
+/*    }*/
+/*    return;*/
+    for (int i = 1; i < n; i++) 
     {
-        for (int i=0; i<=n-2; i++) {
-            if (values[i + 1] < values[i])
-            {
-                int tmp = values[i];
-                values[i] = values[i+1];
-                values[i+1] = tmp;
-            }        
+        int j = i;
+        int counter = values[i];
+        while (j > 0 && values[j - 1] > counter)
+        {
+            values[n] = values[n-1];
+            j = j-1;
+            values[j] = counter;
         }
-    }
-    return;
+    }   
+    
 }
 
 bool isSorted(int values[], int n) 
