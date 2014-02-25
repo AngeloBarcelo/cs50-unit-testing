@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     printf("\n123456789 should be sorted%s", isTrue(isSorted(bigArray, 10)));
     
     int duplicateArray[4] = {1, 1, 1, 1};
-    printf("\nduplicate numbers in an array should be considered sorted %s", isTrue(isSorted(duplicateArray, 4)));
+    printf("\n1, 1, 1, 1 is already sorted %s", isTrue(isSorted(duplicateArray, 4)));
     
     //sort
     int singleArray[1] = {1};
@@ -37,15 +37,15 @@ int main(int argc, string argv[])
     
     int doubleArray[2] = {2, 1};
     sort(doubleArray, 2);
-    printf("\nDouble array should be sorted %s", isTrue(isSorted(doubleArray, 1)));
+    printf("\n2,1 should be 1,2 %s", isTrue(isSorted(doubleArray, 1)));
     
     int tripleArray[3] = {3, 2, 1};
     sort(tripleArray, 3);
-    printf("\nTriple array should be sorted %s", isTrue(isSorted(tripleArray, 3)));
+    printf("\n3,2,1 should be 1,2,3 %s", isTrue(isSorted(tripleArray, 3)));
     
     int hugeArray[10] = {3, 4, 1, 2, 6, 5, 9, 8, 7, 0};
     sort(hugeArray, 10);
-    printf("\nHuge array should be sorted %s", isTrue(isSorted(hugeArray, 10)));
+    printf("\n3, 4, 1, 2, 6, 5, 9, 8, 7, 0 should be 0,1,2,3,4,5,6,7,8,9, %s", isTrue(isSorted(hugeArray, 10)));
     
     int negativeArray[5] = {5, -2, 3, 3, 1000};
     sort(negativeArray, 5);
